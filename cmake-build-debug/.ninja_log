@@ -1,0 +1,5 @@
+# ninja log v5
+53	115	6894501883739794	SimCity.exe	caee7b0913b1c1c7
+1	51	6894501883149654	CMakeFiles/SimCity.dir/main.c.obj	c7618f3f0c179d8b
+1	106	6894502560311481	build.ninja	eabc12a21515cb0f
+1	61	6894502581935839	SimCity.exe	e59fd62b8bb2b6a8
