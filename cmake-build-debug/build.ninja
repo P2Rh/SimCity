@@ -55,6 +55,12 @@ build CMakeFiles/SimCity.dir/main.c.obj: C_COMPILER__SimCity_Debug C$:/Users/cle
   OBJECT_DIR = CMakeFiles\SimCity.dir
   OBJECT_FILE_DIR = CMakeFiles\SimCity.dir
 
+build CMakeFiles/SimCity.dir/mesFonctions.c.obj: C_COMPILER__SimCity_Debug C$:/Users/cleme/Documents/ECE/ING$ 2/ING$ 2$ -$ Semestre$ 1/Theorie$ des$ graphes/SimCity/mesFonctions.c || cmake_object_order_depends_target_SimCity
+  DEP_FILE = CMakeFiles\SimCity.dir\mesFonctions.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\SimCity.dir
+  OBJECT_FILE_DIR = CMakeFiles\SimCity.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target SimCity
@@ -63,7 +69,7 @@ build CMakeFiles/SimCity.dir/main.c.obj: C_COMPILER__SimCity_Debug C$:/Users/cle
 #############################################
 # Link the executable SimCity.exe
 
-build SimCity.exe: C_EXECUTABLE_LINKER__SimCity_Debug CMakeFiles/SimCity.dir/main.c.obj
+build SimCity.exe: C_EXECUTABLE_LINKER__SimCity_Debug CMakeFiles/SimCity.dir/main.c.obj CMakeFiles/SimCity.dir/mesFonctions.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lmingw32  -lalleg44  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\SimCity.dir
