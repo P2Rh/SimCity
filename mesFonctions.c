@@ -10,7 +10,7 @@ void initialisationAllegro()
     set_color_depth(desktop_color_depth());
     if (set_gfx_mode(GFX_AUTODETECT_WINDOWED,1024,768,0,0)!=0)
     {
-        allegro_message("Probl%cme graphique", 138);
+        allegro_message("Probleme graphique");
         allegro_exit();
         exit(EXIT_FAILURE);
     }
@@ -222,13 +222,13 @@ void menuDemarrage()
         {
 /*
         //Affichage des coordonnées de la souris à l’écran graphique
-        textprintf_ex(screen, font, 0, 20, makecol(255, 255, 255),makecol(0,0,0), "Coordonnees de la souris en ligne : %4d et en colonne : %4d", mouse_y, mouse_x);
+        textprintf_ex(screen, font, 0, 20, makecol(255, 255, 255),makecol(0,0,0), "Coordonnees de la souris en y : %4d et en x : %4d", mouse_y, mouse_x);
 */
-            //Si bouton 'Nouvelle partie cliqué" -> lance une nouvelle partie
+            //Si bouton 'Nouvelle partie cliqué" -> lance le choix du mode de jeu
             if(mouse_x>=384 && mouse_x<=647 && mouse_y>=267 && mouse_y<=335)
             {
                 clic=1;
-
+                choixMode();
                 clear_bitmap(screen);
             }
 
@@ -236,7 +236,7 @@ void menuDemarrage()
             if(mouse_x>=384 && mouse_x<=647 && mouse_y>=363 && mouse_y<=434)
             {
                 clic=1;
-
+                //chargerPartie();
                 clear_bitmap(screen);
             }
 
@@ -244,7 +244,7 @@ void menuDemarrage()
             if(mouse_x>=384 && mouse_x<=647 && mouse_y>=463 && mouse_y<=530)
             {
                 clic=1;
-
+                //optionsJeu();
                 clear_bitmap(screen);
             }
 
@@ -252,7 +252,7 @@ void menuDemarrage()
             if(mouse_x>=384 && mouse_x<=647 && mouse_y>=555 && mouse_y<=625)
             {
                 clic=1;
-
+                //creditsJeu();
                 clear_bitmap(screen);
             }
 
@@ -260,8 +260,8 @@ void menuDemarrage()
             if(mouse_x>=384 && mouse_x<=647 && mouse_y>=650 && mouse_y<=717)
             {
                 clic=1;
-
                 //exitJeu();
+                clear_bitmap(screen);
             }
         }
     }
@@ -269,3 +269,50 @@ void menuDemarrage()
 /*-----------------------------------------------------------------------------------------------------*/
 
 
+/*-----------------------------------------------------------------------------------------------------*/
+///Lancement du jeu (chargement, choix des joueurs,...)
+void choixMode()
+{
+    int clic = 0;
+    show_mouse(screen);   //Affichage curseur souris
+
+    /******************************************************************************/   //Création / chargement bitmaps
+    BITMAP* choixMode;
+    choixMode = load_bitmap("choixMode.bmp",NULL);
+
+    if (!choixMode)
+    {
+        allegro_message("Nous n'avons pas pu charger \"choixMode.bmp\"");
+        quitterAllegro();
+    }
+    //******************************************************************************//
+    //Affichage bitmaps
+    clear_bitmap(screen);
+    blit(choixMode,screen, 0, 0, 0, 0, 1024, 768);
+    sleep(1);
+    //******************************************************************************//
+
+    //Utilisation de la souris sur les boutons (boucle)
+    while (clic == 0){
+        //Si clic gauche souris cliqué
+        if (mouse_b & 1)
+        {
+
+            if(mouse_x>=182 && mouse_x<=438 && mouse_y>=456 && mouse_y<=534)
+            {
+                clic=1;
+                //modeCommuniste();
+                clear_bitmap(screen);
+            }
+
+            //Si bouton 'capitaliste' cliqué -> lancement partie en mode communiste
+            if(mouse_x>=603 && mouse_x<=860 && mouse_y>=456 && mouse_y<=534)
+            {
+                clic=1;
+                //modeCapitaliste();
+                clear_bitmap(screen);
+            }
+        }
+    }
+}
+/*-----------------------------------------------------------------------------------------------------*/
