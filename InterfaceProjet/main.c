@@ -80,7 +80,7 @@ int main() {
 
     ellipse(page,800,1100,50,5,(0,0,0));
     rectfill(page, 802,1102,850,1110,(255,255,255));
-    textprintf_ex(page,font,52,1102,(255,255,255),-1,"Capa elec: %d",);
+    textprintf_ex(page,font,52,1102,(255,255,255),-1,"Capa elec: %d");
 
 
     ellipse(page,1280,600,50,5,(0,0,0));
