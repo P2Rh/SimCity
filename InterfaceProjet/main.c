@@ -30,10 +30,35 @@ int main() {
     page2= create_bitmap(1324,1068);
     clear_bitmap(page2);
     chateauEau = load_bitmap("CaseChateau.bmp",NULL);
+    if(!chateauEau)
+    {
+        allegro_message("Erreur chargement");
+
+    }
     centraleElec = load_bitmap("CentraleElec3.bmp",NULL);
+    if(!centraleElec)
+    {
+        allegro_message("Erreur chargement");
+
+    }
     passer = load_bitmap("BoutonPasser.bmp",NULL);
+    if(!passer)
+    {
+        allegro_message("Erreur chargement");
+
+    }
     goutteEau = load_bitmap("goutte.bmp",NULL);
+    if(!goutteEau)
+    {
+        allegro_message("Erreur chargement");
+
+    }
     argent= load_bitmap("coin.bmp",NULL);
+    if(!argent)
+    {
+        allegro_message("Erreur chargement");
+
+    }
 
     textprintf_ex(page,font,2,685,(255,255,255),-1,"Vos informations de jeu: ");
     rectfill(page2,0,0,1324,1068,(0,255,0));
