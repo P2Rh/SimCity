@@ -4,3 +4,4 @@ project(InterfaceProjet C)
 set(CMAKE_C_STANDARD 23)
 
 add_executable(InterfaceProjet main.c)
+target_link_libraries(InterfaceProjet -lmingw32 -lalleg44)

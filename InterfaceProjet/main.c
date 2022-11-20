@@ -25,9 +25,9 @@ int main() {
 
     buffer= create_bitmap(1024,768);
     clear_bitmap(buffer);
-    page= create_bitmap(1324,1068);
+    page= create_bitmap(1024,768);
     clear_bitmap(page);
-    page2= create_bitmap(1324,1068);
+    page2= create_bitmap(1024,768);
     clear_bitmap(page2);
     chateauEau = load_bitmap("CaseChateau.bmp",NULL);
     if(!chateauEau)
@@ -61,7 +61,7 @@ int main() {
     }
 
     textprintf_ex(page,font,2,685,(255,255,255),-1,"Vos informations de jeu: ");
-    rectfill(page2,0,0,1324,1068,(0,255,0));
+    rectfill(page2,0,0,1024,768,(0,255,0));
 
     ellipse(page,50,700,50,5,(0,0,0));
     rectfill(page, 52,702,100,710,(255,255,255));
@@ -78,22 +78,22 @@ int main() {
     draw_sprite(page,goutteEau,610,710);
 
 
-    ellipse(page,800,1100,50,5,(0,0,0));
-    rectfill(page, 802,1102,850,1110,(255,255,255));
-    textprintf_ex(page,font,52,1102,(255,255,255),-1,"Capa elec: %d");
+    ellipse(page,800,700,50,5,(0,0,0));
+    rectfill(page, 802,702,850,710,(255,255,255));
+    textprintf_ex(page,font,802,702,(255,255,255),-1,"Capa elec: %d");
 
 
-    ellipse(page,1280,600,50,5,(0,0,0));
-    rectfill(page, 1282,602,1320,610,(255,255,255));
-    textprintf_ex(page,font,1282,610,(255,255,255),-1,"Niveau 0");
+    ellipse(page,980,600,50,5,(0,0,0));
+    rectfill(page, 982,602,1020,610,(255,255,255));
+    textprintf_ex(page,font,983,610,(255,255,255),-1,"Niveau 0");
 
-    ellipse(page,1280,550,50,5,(0,0,0));
-    rectfill(page, 1282,552,1320,510,(255,255,255));
-    textprintf_ex(page,font,1282,510,(255,255,255),-1,"Niveau -1");
+    ellipse(page,980,550,50,5,(0,0,0));
+    rectfill(page, 982,552,1020,510,(255,255,255));
+    textprintf_ex(page,font,982,510,(255,255,255),-1,"Niveau -1");
 
-    ellipse(page,1280,500,50,5,(0,0,0));
-    rectfill(page, 1282,502,1320,510,(255,255,255));
-    textprintf_ex(page,font,1282,510,(255,255,255),-1,"Niveau -2");
+    ellipse(page,980,500,50,5,(0,0,0));
+    rectfill(page, 982,502,1020,410,(255,255,255));
+    textprintf_ex(page,font,983,411,(255,255,255),-1,"Niveau -2");
 
     draw_sprite(page,centraleElec,1050,120);
     draw_sprite(page,chateauEau,1050,220);
