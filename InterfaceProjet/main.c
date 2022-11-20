@@ -95,13 +95,13 @@ int main() {
     rectfill(page, 982,502,1020,410,(255,255,255));
     textprintf_ex(page,font,983,411,(255,255,255),-1,"Niveau -2");
 
-    draw_sprite(page,centraleElec,1050,120);
-    draw_sprite(page,chateauEau,1050,220);
+    draw_sprite(page,centraleElec,980,120);
+    draw_sprite(page,chateauEau,980,220);
 
 
     blit(buffer,page,0,0,0,0,1024,768);
-    blit(page2,page,0,0,0,0,1324,1068);
-    blit(page,screen,0,0,0,0,1324,1068);
+    blit(page2,page,0,0,0,0,1024,768);
+    blit(page,screen,0,0,0,0,1024,768);
     while(!key[KEY_ESC])
     {}
     return 0;
