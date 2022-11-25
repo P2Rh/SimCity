@@ -11,32 +11,24 @@
 
 /*----------------------------------------------*/
 ///Structures
-typedef struct ressources{
+typedef struct Batiment
+{
+    int type;
+    int load;
+    int pop;
+    int popMax;
+    int eau;
+    int elec;
+}Batiment;
+
+typedef struct Ville
+{
     int argent;
-    int nbHabitants;
-    int capaElec;
-    int capaEau;
-}t_ressources;
+    int pop;
+    int elec;
+    int eau;
 
-typedef struct element{ // Infos du terrain
-    int typeElement; // 1= habitation 2= chateau eau, 3=central élec, 4=caserne 5=route
-    int nivTerrain; // son niveau (ex: niveau 5= gratte ciel)
-    int posX; // num ligne
-    int posY; //num colonne
-    int dimX;
-    int dimY;
-    int prix;
-    int coRoute;/// 1 si connecté, 0 si non
-    int coRouteX;
-    int coRouteY;
-    int distrib; /// quantité d'eau que le chateau ou la centrale distribue
-    int aproElec; ///taux d'approvisionnement élec qui dépend du niveau de l'habitation
-    int aproEau; ///taux d'approvisionnement eau qui va depend du niveau de l'habitation
-    int usineViste;///0 ou 1
-    int maisonVisite;///0 ou 1
-}t_element;
-
-
+}Ville;
 /*----------------------------------------------*/
 
 

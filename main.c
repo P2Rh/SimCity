@@ -18,6 +18,7 @@ int main()
     //Lancement menu démarage
     menuDemarrage();
 
+    grilleJeu();
 
     return 0;
 }END_OF_MAIN();   //Macro de fin Allegro
