@@ -346,6 +346,11 @@ void route(Batiment cases[35][45], BITMAP* roadfront,int i,int j,BITMAP* out, in
 /*-----------------------------------------------------------------------------------------------------*/
 BITMAP* Affichage(Batiment cases[35][45],BITMAP* grass,BITMAP* house,BITMAP* roadfront, BITMAP* elec, BITMAP* eau){
     BITMAP* mapG= create_bitmap(1024,768);
+
+    //Arrière plan du jeu
+    BITMAP* fond= load_bitmap("Images/fond.bmp",NULL);
+    blit(fond,mapG,0,0,0,0,1024,768);
+
     for(int j=0;j<35;j++)
     {
         for(int i=0;i<45;i++)
@@ -609,12 +614,15 @@ void grilleJeu()
             }
         }
     }
-
+/*
     blit(mapG,buffer,0,0,0,0,1024,768);
     blit(buffer,screen,0,0,0,0,1024,768);
-
+    blit(fond,buffer,0,0,0,0,1024,768);
+*/
     while(!key[KEY_ESC])
     {
+       // textprintf_ex(screen, font, 0, 20, makecol(255, 255, 255),makecol(0,0,0), "Coordonnees de la souris en y : %4d et en x : %4d", mouse_y, mouse_x);
+
         clear_bitmap(buffer);
         mapG=Affichage(cases,grass,house,roadfront,elec,eau); //Affichage de mapG
         blit(mapG,buffer,0,0,0,0,1024,768);
