@@ -27,7 +27,6 @@ typedef struct Ville
     int pop;
     int elec;
     int eau;
-
 }Ville;
 /*----------------------------------------------*/
 

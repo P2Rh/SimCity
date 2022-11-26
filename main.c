@@ -16,9 +16,15 @@ int main()
     show_mouse(screen); //Permet de montrer la souris à l'écran
 
     //Lancement menu démarage
-    menuDemarrage();
+    //menuDemarrage();
 
-    grilleJeu();
+    Ville* maVille;   //Alloc dynamique
+    maVille= malloc(sizeof(Ville));
+
+    initVille(maVille);  //Initialisation des données de la ville
+    boucleJeu(maVille);  //lancement boucle de Jeu
+
+    free(maVille);  //libération mémoire
 
     return 0;
 }END_OF_MAIN();   //Macro de fin Allegro
