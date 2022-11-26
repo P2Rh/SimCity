@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.2.1/bin/ninja/win/ninja.exe" -G Ninja -S "C:\Users\cleme\Documents\ECE\ING 2\ING 2 - Semestre 1\Theorie des graphes\SimCity" -B "C:\Users\cleme\Documents\ECE\ING 2\ING 2 - Semestre 1\Theorie des graphes\SimCity\cmake-build-debug"
+"C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" -S C:\Users\hugoc\CLionProjects\SimCity -B C:\Users\hugoc\CLionProjects\SimCity\cmake-build-debug
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/cleme/Documents/ECE/ING 2/ING 2 - Semestre 1/Theorie des graphes/SimCity/cmake-build-debug
+-- Build files have been written to: C:/Users/hugoc/CLionProjects/SimCity/cmake-build-debug

@@ -4,6 +4,7 @@
 ///Petits sous-programmes pour éviter les répétitions
 
 //Fonction pour quitter Allegro (pour éviter de réécrire à chaque fois)
+
 void initialisationAllegro()
 {
     allegro_init();
