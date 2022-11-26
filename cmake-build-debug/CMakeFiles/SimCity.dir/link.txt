@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2022.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\SimCity.dir/objects.a
+C:\MinGW\bin\ar.exe qc CMakeFiles\SimCity.dir/objects.a @CMakeFiles\SimCity.dir\objects1.rsp
+C:\MinGW\bin\gcc.exe -g -Wl,--whole-archive CMakeFiles\SimCity.dir/objects.a -Wl,--no-whole-archive -o SimCity.exe -Wl,--out-implib,libSimCity.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\SimCity.dir\linklibs.rsp
