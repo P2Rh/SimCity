@@ -542,9 +542,30 @@ void Construction(Batiment cases[35][45],BITMAP* house,BITMAP* mapG,BITMAP* road
 }
 /*-----------------------------------------------------------------------------------------------------*/
 
+/*-----------------------------------------------------------------------------------------------------*/
+void initVille(Ville* maVille)
+{
+    maVille -> argent = 500000;
+    maVille -> pop = 0;
+    maVille -> elec = 0;
+    maVille -> eau = 0;
+}
+/*-----------------------------------------------------------------------------------------------------*/
+
 
 /*-----------------------------------------------------------------------------------------------------*/
-void grilleJeu()
+void statsVille(Ville* maVille, BITMAP* buffer)
+{
+    //textprintf_ex(page,font,500,20,makecol(255,255,255),-1,"Temps de jeu: %d:%d:%.0f",); // Temps
+    textprintf_ex(buffer,font,200,740,makecol(255,255,255),-1,"%d ECE Flouz", maVille -> argent);
+    textprintf_ex(buffer,font,350,740,makecol(255,255,255),-1,"%d",maVille -> pop);
+    textprintf_ex(buffer,font,595,740,makecol(255,255,255),-1,"%d",maVille -> elec);
+    textprintf_ex(buffer,font,880,740,makecol(255,255,255),-1,"%d",maVille -> eau);
+}
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------------*/
+void boucleJeu(Ville* maVille)
 {
     FILE* map;
     BITMAP* buffer;
@@ -626,6 +647,9 @@ void grilleJeu()
         clear_bitmap(buffer);
         mapG=Affichage(cases,grass,house,roadfront,elec,eau); //Affichage de mapG
         blit(mapG,buffer,0,0,0,0,1024,768);
+
+        statsVille(maVille,buffer);
+
         show_mouse(buffer);
         if(key[KEY_C])
         {
